@@ -10,8 +10,8 @@ Análise da **Lei de Newcomb-Benford** aplicada a dados aleatórios gerados por 
 
 Em muitos conjuntos de dados do mundo real, o **primeiro dígito** dos números **não** aparece com frequência igual. Os dígitos menores aparecem bem mais:
 
-| Dígito              | 1     | 2     | 3     | 4    | 5    | 6    | 7    | 8    | 9    |
-| ------------------- | ----- | ----- | ----- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Dígito | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|---|---|---|---|---|---|---|---|---|---|
 | Frequência esperada | 30,1% | 17,6% | 12,5% | 9,7% | 7,9% | 6,7% | 5,8% | 5,1% | 4,6% |
 
 A fórmula é:
@@ -37,11 +37,11 @@ Para cada conjunto de dados o script:
 
 Referência de interpretação do MAD (Nigrini):
 
-| MAD            | Conformidade |
-| -------------- | ------------ |
-| até 0,006      | Próxima      |
-| 0,006 a 0,012  | Aceitável    |
-| 0,012 a 0,015  | Marginal     |
+| MAD | Conformidade |
+|---|---|
+| até 0,006 | Próxima |
+| 0,006 a 0,012 | Aceitável |
+| 0,012 a 0,015 | Marginal |
 | acima de 0,015 | Não conforme |
 
 ---
@@ -61,21 +61,21 @@ Referência de interpretação do MAD (Nigrini):
 
 ## 🎲 Dados aleatórios (n = 10.000 cada)
 
-| Conjunto                     | MAD    | p-valor | Segue Benford? |
-| ---------------------------- | ------ | ------- | -------------- |
-| Uniforme (1 a 9999)          | 0,059  | ≈ 0     | ❌             |
-| Normal (média 1000, dp 200)  | 0,106  | ≈ 0     | ❌             |
-| Log-uniforme (1 a 1.000.000) | 0,0028 | 0,18    | ✅             |
+| Conjunto | MAD | p-valor | Segue Benford? |
+|---|---|---|---|
+| Uniforme (1 a 9999) | 0,059 | ≈ 0 | ❌ |
+| Normal (média 1000, dp 200) | 0,106 | ≈ 0 | ❌ |
+| Log-uniforme (1 a 1.000.000) | 0,0028 | 0,18 | ✅ |
 
 ![Gráficos dos dados aleatórios](grafico_aleatorios.png)
 
 ## 🌍 Dados reais
 
-| Conjunto                                        | n      | MAD    | p-valor | Resultado               |
-| ----------------------------------------------- | ------ | ------ | ------- | ----------------------- |
-| População de cidades dos EUA                    | 28.673 | 0,0014 | 0,55    | ✅ Conformidade próxima |
-| Votos por estado e candidato (EUA 2008)         | 343    | 0,0179 | 0,20    | ⚠️ Ambíguo              |
-| Listas de espera de saúde (Finlândia e Espanha) | 1.358  | 0,0202 | ≈ 0     | ❌ Não segue            |
+| Conjunto | n | MAD | p-valor | Resultado |
+|---|---|---|---|---|
+| População de cidades dos EUA | 28.673 | 0,0014 | 0,55 | ✅ Conformidade próxima |
+| Votos por estado e candidato (EUA 2008) | 343 | 0,0179 | 0,20 | ⚠️ Ambíguo |
+| Listas de espera de saúde (Finlândia e Espanha) | 1.358 | 0,0202 | ≈ 0 | ❌ Não segue |
 
 ![Gráficos dos dados reais](grafico_reais.png)
 
@@ -86,11 +86,11 @@ Referência de interpretação do MAD (Nigrini):
 Os conjuntos reais vêm do repositório
 [byuidatascience/data4benfords](https://github.com/byuidatascience/data4benfords) (pasta `data-raw`), que reúne dados públicos usados em estudos sobre Benford:
 
-| Dado                                           | Arquivo         | Origem                                                                                            |
-| ---------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------- |
-| População de cidades dos EUA                   | `cities_us.csv` | [SimpleMaps – US Cities](https://simplemaps.com/data/us-cities)                                   |
-| Eleição presidencial EUA 2008 (Obama × McCain) | `election.csv`  | [midnightradio/cse140-data-programming](https://github.com/midnightradio/cse140-data-programming) |
-| Listas de espera de saúde                      | `waitlist.csv`  | Repositório data4benfords (confira a origem original lá)                                          |
+| Dado | Arquivo | Origem |
+|---|---|---|
+| População de cidades dos EUA | `cities_us.csv` | [SimpleMaps – US Cities](https://simplemaps.com/data/us-cities) |
+| Eleição presidencial EUA 2008 (Obama × McCain) | `election.csv` | [midnightradio/cse140-data-programming](https://github.com/midnightradio/cse140-data-programming) |
+| Listas de espera de saúde | `waitlist.csv` | Repositório data4benfords (confira a origem original lá) |
 
 ---
 
